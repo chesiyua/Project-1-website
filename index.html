@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Physical Computing Fall 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+  }
+body {
+  font-size:16px;
+  }
+h1 { 
+  font-size:30px;
+  }
+h2 {
+  font-size:25px;
+  }
+  h3 {
+  font-size:18px;
+  }
+img {
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.w3-half img{
+  margin-bottom:-6px;
+  margin-top:16px;
+  opacity:0.8;
+  cursor:pointer
+  } */
+.w3-half img:hover{
+  opacity:1
+  }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft" style="display:none;font-size:22px"></a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>IXD<br>DESN 30146<br>Fall 2026</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#Module1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 1</a> 
+    <a href="#Activity1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 1</a> 
+    <a href="#Activity2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 2</a>
+    <a href="#Activity3" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 3</a>
+    <a href="#ResearchActivity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research Activity</a>
+    <a href="#ProjectConcept" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project Concept</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens
+<header class="w3-container w3-top w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Menu</span>
+</header> -->
+
+<!-- 
+  if you want to link your image to a video use one of the following alt links as an example:
+
+  alt="test1Lorem ipsum dolor sit amet, consectetur adipiscing elit test1Lorem ipsum dolor sit amet, consectetur adipiscing elit <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+  alt="test2Lorem ipsum dolor sit amet, consectetur adipiscing elit <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+
+-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:220px;margin-right:20px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="default">
+    <h1 class="w3-jumbo" id="Home"><b>Physical Computing</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Weekly Activity Template</b></h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Siyuan Chen —DESN30146 Physical Computing. In this project, I learned about physical computing through Arduino, ProtoPie, and TouchDesigner. I completed three activities and did some research. Finally, I chose Smart Lighting Scenes as my project concept.</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+  </div>
+  <!-- Boilerplate -->
+  <div id="Module1" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Module 1</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Activity Research</h2>
+    <h3>In Module 1, I learned how to use Arduino to control lights, read sensor data, and connect physical actions to digital outputs. In Activity 1, I controlled an LED with code and Serial Monitor. In Activity 2, I sent sensor data to a phone app with ProtoPie. In Activity 3, I used a knob to control a visual effect in TouchDesigner.
+    </h3>
+  </div>
+  
+  <!-- Project 1 Photo grid (modal) -->
+  <div id="Activity1" >
+    <h2>Activity 1</h2>
+    <div class="grid">
+      <img src="images/Activity1/1.png" style="width:100%" onclick="onClick(this)" alt="Setting up the Arduino Uno for the first time. The board is connected to my laptop with a USB cable. This was Step 1 of the activity， connect the board and get the Arduino IDE ready. <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+      <img src="images/Activity1/2.png" style="width:100%" onclick="onClick(this)" alt="My first sketch in Arduino IDE 2.3.10, based on the built-in Blink example. The board is set to Arduino Uno <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+      <img src="images/Activity1/3.png" style="width:100%" onclick="onClick(this)" alt="I rewrote Blink using my own pin variables, pin 12 and pin 13, and shortened the delay from 1000 ms to 100 ms to test a much faster flash.">
+      <img src="images/Activity1/4.png" style="width:100%" onclick="onClick(this)" alt="I added Serial Monitor control.">
+      <img src="images/Activity1/5.jpg" style="width:100%" onclick="onClick(this)" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="Activity2" class="w3-row-padding">
+    <h2>Activity 2</h2>
+    <div class="grid">
+      <img src="images/Activity2/1.png" style="width:100%" onclick="onClick(this)" alt="This is the code posted on Team during teaching.">
+      <img src="images/Activity2/2.jpg" style="width:100%" onclick="onClick(this)" alt="These are the tools used in this activity">
+      <img src="images/Activity2/3.png" style="width:100%" onclick="onClick(this)" alt="This is the screenshot that shows the data connection succeeding">
+      <img src="images/Activity2/4.jpg" style="width:100%" onclick="onClick(this)" alt="This screenshot shows the sensor readings, successful data transmission, and I have opened the Protopie mobile app, hoping to transfer the data to my phone.">
+      <img src="images/Activity2/5.jpg" style="width:100%" onclick="onClick(this)" alt="This screenshot shows that the data connection is normal, and the phone is currently displaying real weather data, indicating that the content on the phone has successfully received data from the Arduino.">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="Activity3" class="w3-row-padding">
+    <h2>Activity 3</h2>
+    <div class="grid">
+      <img src="images/Activity3/1.png" style="width:100%" onclick="onClick(this)" alt="This is the code I got from the team. What it does is continuously measure where the knob has turned to, convert the position into a number from 0 to 100, and send it to the computer.">
+      <img src="images/Activity3/2.png" style="width:100%" onclick="onClick(this)" alt="The computer keeps receiving the number 100, over and over. That is because I had turned the knob all the way to the end… Seeing the number sit at 100 proved the board, the cable and the code were all working together">
+      <img src="images/Activity3/3.png" style="width:100%" onclick="onClick(this)" alt="The TouchDesigner screenshot provided by the team">
+      <img src="images/Activity3/4.jpg" style="width:100%" onclick="onClick(this)" alt="This is the source of my code—it's sample code.">
+      <img src="images/Activity3/5.jpg" style="width:100%" onclick="onClick(this)" alt="The small boxes in the middle are how the program receives the number from the board: one of them shows the number 65, which was the value coming from the knob at that moment. From there the number is passed along to the big orange circle a real action, turning a knob by hand, starts to control a picture on the screen">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="ResearchActivity" class="w3-row-padding">
+    <h2>Research Activity</h2>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Consumer Trend Research</h2>
+    <h3>I researched two smart home trends: Smart Climate Control and Smart Lighting. I used NielsenIQ and EMARKETER to learn about these technologies. 
+    </h3>
+    <div class="grid">
+      <img src="images/Research/1.jpg" style="width:100%" onclick="onClick(this)" alt="My Step 1 trend table">
+      <img src="images/Research/2.jpg" style="width:100%" onclick="onClick(this)" alt="NielsenIQ smart home report chart">
+      <img src="images/Research/3.jpg" style="width:100%" onclick="onClick(this)" alt="EMARKETER smart home report chart">
+    </div>
+    <h2>Personas Research</h2>
+    <h3>I created two personas, David and Emily, based on my research. David wants to save money on heating and cooling, while Emily wants to control the lighting in her room more easily. 
+    </h3>
+    <div class="grid">
+      <img src="images/Research/4.jpg" style="width:100%" onclick="onClick(this)" alt="My Step 2 personas, David and Emily">
+      <img src="images/Research/5.jpg" style="width:100%" onclick="onClick(this)" alt="Emily, 23, university student, needs different lighting">
+      <img src="images/Research/6.jpg" style="width:100%" onclick="onClick(this)" alt="David, 45, office worker, wants a comfortable home temperature">
+    </div>
+    <h2>HMI Research</h2>
+    <h3>I looked at the problems David and Emily face in their daily lives and wrote two HMW questions for each of them
+    </h3>
+    <div class="grid">
+      <img src="images/Research/7.jpg" style="width:100%" onclick="onClick(this)" alt="My Step 3 HMI table">
+      <img src="images/Research/8.jpg" style="width:100%" onclick="onClick(this)" alt="NN/g article on How Might We questions">
+      <img src="images/Research/9.jpg" style="width:100%" onclick="onClick(this)" alt="Monash report on smart appliance control">
+    </div>
+    <h2>Project Path</h2>
+    <h3>I chose the Design Path because I want to make something useful in daily life. I also decided to work individually so I can test my ideas at my own pace.
+    </h3>
+    <div class="grid">
+      <img src="images/Research/10.jpg" style="width:100%" onclick="onClick(this)" alt="My Step 4 path table">
+      <img src="images/Research/11.jpg" style="width:100%" onclick="onClick(this)" alt="Paper on prototyping tangible interfaces">
+      <img src="images/Research/12.jpg" style="width:100%" onclick="onClick(this)" alt="Paper on individual or collaborative projects">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <!-- Boilerplate -->
+  <div id="ProjectConcept" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 1 Concept</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Project 1 Concept</h2>
+    <p>My final concept is Smart Lighting Scenes. I plan to use Arduino and a light sensor to adjust LED brightness automatically, while also allowing users to control the lights manually
+    </p>
+    <img src="images/Concept/1.jpg" style="width:100%" onclick="onClick(this)" alt="test2Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+  </div>
+  
+   <!-- Modal for full size images on click-->
+   <div id="modal01" class="w3-modal w3-grey" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-center w3-transparent" style ="padding:20px">
+      <img id="img01" class="w3-image">
+      <h2 id="caption"></h2>
+
+      <!-- <div id="urLink"></div> -->
+      <!-- <a id="urLink" class="container"><iframe class="responsive-iframe"></iframe></a> -->
+    <!-- </div> -->
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+
+  // var captionUrl = document.getElementById("urLink");
+  // captionUrl.innerHTML = element.url;
+
+  //document.getElementById("urLink").src = element.url;
+}
+</script>
+
+</body>
+</html>
